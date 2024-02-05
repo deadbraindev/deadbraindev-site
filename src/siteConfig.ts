@@ -1,8 +1,16 @@
 export const metaTags = {
-  title: 'deadbrain.dev',
+  title: 'deadbrain',
   description: '💀🧠',
+
   publisher: 'deadbrain.dev',
-  category: 'portfolio',
+
+  metadataBase: new URL('https://www.deadbrain.dev'),
+  alternates: {
+    // canonical link with query params
+    // canonical: './',
+    // canonical link without query params
+    // canonical: '/',
+  },
 
   // openGraph: {
   //   title: 'strona główna | archiwum kulinarne',

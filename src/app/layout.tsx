@@ -8,10 +8,11 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: metaTags.title,
-    template: `%s - ${metaTags.title}`,
+    default: `home page • ${metaTags.title} `,
+    template: `%s • ${metaTags.title}`,
   },
   description: metaTags.description,
+  metadataBase: metaTags.metadataBase,
   alternates: {
     canonical: './',
   },
