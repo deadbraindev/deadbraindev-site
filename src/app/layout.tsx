@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
-import { Inter } from 'next/font/google';
+// import { Inter } from 'next/font/google';
+import { Courier_Prime } from 'next/font/google';
 import './globals.css';
 import { metaTags } from '@/siteConfig';
+import Navbar from '@/components/Navbar';
 
-const inter = Inter({ subsets: ['latin'] });
+const courierPrime = Courier_Prime({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -25,7 +32,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={courierPrime.className}>
+        <Navbar />
         {children}
         <Analytics />
       </body>
