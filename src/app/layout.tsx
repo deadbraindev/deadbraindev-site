@@ -2,12 +2,19 @@ import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { metaTags } from '@/siteConfig';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'deadbrain.dev',
-  description: 'deadbrain hub',
+  title: {
+    default: metaTags.title,
+    template: `%s - ${metaTags.title}`,
+  },
+  description: metaTags.description,
+  alternates: {
+    canonical: './',
+  },
 };
 
 export default function RootLayout({
