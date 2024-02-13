@@ -2,13 +2,20 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-row items-center justify-between min-w-[350px] max-w-[440px]  m-auto">
-      <Link href="/" className="py-6 px-4 text-2xl ">
-        <span className="underline underline-offset-4 ">[ Home ]</span>
+    <nav className="flex flex-row items-center justify-center min-w-[350px] max-w-[440px] m-auto text-2xl px-2 py-4 text-blueLink leading-none">
+      <span>[</span>
+      <Link href="/" className="px-2">
+        <span className="underline ">Home</span>
       </Link>
-      <Link href="/" className="py-6 px-4 text-2xl">
-        <span className="underline underline-offset-4">[ Menu ]</span>
+      <span className="">|</span>
+      <Link href="/testpage" className="px-2">
+        <span className="underline text-blueLink">What&apos;s new?</span>
       </Link>
+      <span className="">|</span>
+      <Link href="/testpage" className="px-2">
+        <span className="underline text-blueLink">Contact</span>
+      </Link>
+      <span>]</span>
     </nav>
   );
 }

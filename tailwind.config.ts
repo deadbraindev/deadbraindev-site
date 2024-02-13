@@ -10,7 +10,8 @@ const config: Config = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      white: '#ffffff',
+      white: '#fff',
+      black: '#000',
       blueLink: '#0000ff',
       // purple: '#3f3cbb',
       // midnight: '#121063',

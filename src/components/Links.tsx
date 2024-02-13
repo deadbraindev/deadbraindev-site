@@ -2,41 +2,28 @@ import Link from 'next/link';
 
 export default function Links() {
   return (
-    <div className="">
-      <ol className="list-decimal list-inside text-2xl">
-        <li className="text-2xl p-2 ">
+    <div className="w-full m-auto sm:max-w-[450px] px-4">
+      <span className="text-xl">Pinned sites:</span>
+      <ul className=" text-2xl">
+        <li className="">
           <Link
             href="https://archiwumkulinarne.deadbrain.dev"
-            className="underline underline-offset-4 text-blueLink"
+            className="underline text-blueLink font-bold"
           >
-            archiwumkulinarne
+            archiwum kulinarne
+            <span className="text-sm bg-[yellow] rounded-md">new</span>
           </Link>
         </li>
-        <li className="text-2xl p-2 ">
+        <li className="">
           <Link
             href="https://lofi.today"
-            className="underline underline-offset-4 text-blueLink"
+            className="underline text-blueLink font-bold"
           >
             lofi.today
+            {/* → */}
           </Link>
         </li>
-        <li className="text-2xl p-2 ">
-          <Link
-            href="https://github.com/deadbraindev"
-            className="underline underline-offset-4 text-blueLink"
-          >
-            github
-          </Link>
-        </li>
-        <li className="text-2xl p-2 ">
-          <Link
-            href="/testpage"
-            className="underline underline-offset-4 text-blueLink"
-          >
-            test page
-          </Link>
-        </li>
-      </ol>
+      </ul>
     </div>
   );
 }

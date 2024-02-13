@@ -1,13 +1,25 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
-import { EB_Garamond } from 'next/font/google';
+import { Old_Standard_TT } from 'next/font/google';
 import './globals.css';
 import { metaTags } from '@/siteConfig';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const EBGaramond = EB_Garamond({
-  weight: ['400', '500', '600', '700', '800'],
+// const EBGaramond = EB_Garamond({
+//   weight: ['400', '500', '600', '700', '800'],
+//   style: ['normal', 'italic'],
+//   subsets: ['latin'],
+//   display: 'swap',
+// });
+// const PlayfairFont = Playfair({
+//   weight: ['400', '500', '600', '700', '800'],
+//   style: ['normal', 'italic'],
+//   subsets: ['latin'],
+//   display: 'swap',
+// });
+const OldStandardTT = Old_Standard_TT({
+  weight: ['400', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
@@ -32,13 +44,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={EBGaramond.className}>
-        <Navbar />
-        <main className="flex flex-col items-center min-h-[700px] min-w-[350px] max-w-[440px] m-auto">
+      <body className={OldStandardTT.className}>
+        <main className="flex flex-col items-center h-[100%]">
+          <Navbar />
+
           {children}
+          <div className="flex-grow" />
+          <Footer />
         </main>
         <Analytics />
-        <Footer />
       </body>
     </html>
   );
