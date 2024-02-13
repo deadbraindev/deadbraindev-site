@@ -1,9 +1,11 @@
-import CardsContainer from '@/components/CardsContainer';
+import Hero from '@/components/Hero';
+import Links from '@/components/Links';
 
 export default function Home() {
   return (
-    <main>
-      <CardsContainer />
-    </main>
+    <>
+      <Hero />
+      <Links />
+    </>
   );
 }

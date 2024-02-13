@@ -2,13 +2,20 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-col items-center my-4">
-      <Link
-        href="/"
-        className="py-4 px-8 text-4xl bg-transparend rounded-3xl font-bold"
-      >
-        deadbrain.dev
+    <nav className="flex flex-row items-center justify-center min-w-[350px] max-w-[440px] m-auto text-2xl px-2 py-4 text-blueLink leading-none">
+      <span>[</span>
+      <Link href="/" className="px-2">
+        <span className="underline ">Home</span>
       </Link>
+      <span className="">|</span>
+      <Link href="/testpage" className="px-2">
+        <span className="underline text-blueLink">What&apos;s new?</span>
+      </Link>
+      <span className="">|</span>
+      <Link href="/testpage" className="px-2">
+        <span className="underline text-blueLink">Contact</span>
+      </Link>
+      <span>]</span>
     </nav>
   );
 }
