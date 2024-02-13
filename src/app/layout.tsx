@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={EBGaramond.className}>
         <Navbar />
-        <main className="flex flex-col items-center min-h-[700px] w-[440px] m-auto">
+        <main className="flex flex-col items-center min-h-[700px] min-w-[350px] max-w-[440px] m-auto">
           {children}
         </main>
         <Analytics />
