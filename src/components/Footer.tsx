@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col m-auto bottom-0 text-center items-center justify-center py-2 w-[350px]">
       <nav className="flex flex-row flex-wrap gap-x-1 gap-y-2 items-center justify-center text-xl px-2 py-4 leading-none">
-        <Link href="/sitemap" className="px-2">
+        <Link href="/sitemap.xml" className="px-2">
           <span className="underline text-bluePrimary hover:text-blueSecondary">
             Site map
           </span>
