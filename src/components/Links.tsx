@@ -10,7 +10,7 @@ export default function Links() {
         <li className="flex flex-row gap-1 items-center">
           <Link
             href="https://archiwumkulinarne.deadbrain.dev"
-            className="underline text-blueLink font-bold"
+            className="underline text-bluePrimary font-bold hover:text-blueSecondary"
           >
             archiwum kulinarne
           </Link>
@@ -19,12 +19,11 @@ export default function Links() {
             alt="Badge for new site"
             className="w-auto h-[20px] pb-1"
           />
-          {/* <span className=" text-sm bg-[#ffff00]">new!</span> */}
         </li>
         <li className="">
           <Link
             href="https://lofi.today"
-            className="underline text-blueLink font-bold"
+            className="underline text-bluePrimary font-bold hover:text-blueSecondary"
           >
             lofi.today
             {/* → */}
