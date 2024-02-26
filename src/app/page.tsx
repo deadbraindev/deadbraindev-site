@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Hero />
       <span className="">hub for my links WIP</span>
-      <span className="mb-8 pb-8 border-b-[1px]">
+      <span className="px-4 mb-8 pb-8 border-b-[1px]">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi.
       </span>
 
