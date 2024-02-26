@@ -10,7 +10,7 @@ export default function Hero() {
         <br />
         to my
         <br />
-        new
+        web
         <br />
         site!
       </h1>

@@ -1,18 +1,25 @@
 import Link from 'next/link';
+import BadgeNew from '@/components/svg/badge-new.svg';
+import Image from 'next/image';
 
 export default function Links() {
   return (
     <div className="w-full m-auto sm:max-w-[450px] px-4">
-      <span className="text-xl">Pinned sites:</span>
+      <span className="text-3xl font-bold">Pinned sites:</span>
       <ul className=" text-2xl">
-        <li className="">
+        <li className="flex flex-row gap-1 items-center">
           <Link
             href="https://archiwumkulinarne.deadbrain.dev"
             className="underline text-blueLink font-bold"
           >
             archiwum kulinarne
-            <span className="text-sm bg-[yellow] rounded-md">new</span>
           </Link>
+          <Image
+            src={BadgeNew}
+            alt="Badge for new site"
+            className="w-auto h-[20px] pb-1"
+          />
+          {/* <span className=" text-sm bg-[#ffff00]">new!</span> */}
         </li>
         <li className="">
           <Link
