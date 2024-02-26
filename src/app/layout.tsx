@@ -28,9 +28,6 @@ export const metadata: Metadata = {
     shortcut: '/icons/apple-icon-180.png',
     apple: '/icons/apple-icon-180.png',
   },
-  appleWebApp: {
-    title: 'deadbrain.dev',
-  },
   publisher: 'deadbrain.dev',
 };
 
