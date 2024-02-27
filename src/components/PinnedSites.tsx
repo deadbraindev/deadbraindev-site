@@ -18,13 +18,23 @@ export default function PinnedSites() {
           <Image
             src={BadgeNew}
             alt="Badge for new site"
-            className="w-auto h-[20px] pb-1"
+            className="w-auto h-[20px] -rotate-[20deg] -translate-x-1 -translate-y-2 "
           />
         </li>
-        <li>
+        <li className="flex flex-row gap-1 items-center">
           <StyledLink href="https://lofi.today" className="font-bold" primary>
             lofi.today
           </StyledLink>
+        </li>
+        <li className="flex flex-row gap-1 items-center">
+          <StyledLink href="/badlink" className="font-bold" primary>
+            404 page test
+          </StyledLink>
+          <Image
+            src={BadgeNew}
+            alt="Badge for new site"
+            className="w-auto h-[20px] -rotate-[20deg] -translate-x-1 -translate-y-2 "
+          />
         </li>
       </ul>
     </div>
