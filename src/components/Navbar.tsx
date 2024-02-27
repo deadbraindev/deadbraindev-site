@@ -1,6 +1,6 @@
 // import Link from 'next/link';
 
-import StyledLink from './StyledLink';
+import StyledLink from '@/components/StyledLink';
 
 export default function Navbar() {
   return (
