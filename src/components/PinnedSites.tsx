@@ -2,7 +2,7 @@ import BadgeNew from '@/components/svg/badge-new.svg';
 import Image from 'next/image';
 import StyledLink from '@/components/StyledLink';
 
-export default function Links() {
+export default function PinnedSites() {
   return (
     <div className="w-full m-auto px-4 sm:max-w-[450px]">
       <h2 className="text-3xl font-bold">Pinned sites:</h2>

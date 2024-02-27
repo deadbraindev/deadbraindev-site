@@ -11,7 +11,7 @@ export default function Hero() {
         className="w-40 sm:w-48 h-auto"
       />
       <h1 className="sr-only">Welcome to my web site!</h1>
-      <h2 className="text-4xl sm:text-6xl text-center font-bold leading-none not-sr-only">
+      <h2 className="text-4xl sm:text-6xl text-center font-bold leading-none not-sr-only min-w-[4lh]">
         Welcome
         <br />
         to my
