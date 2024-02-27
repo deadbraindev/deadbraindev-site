@@ -1,38 +1,33 @@
-import Link from 'next/link';
+import StyledLink from '@/components/StyledLink';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col m-auto bottom-0 text-center items-center justify-center py-2 w-[350px]">
-      <nav className="flex flex-row flex-wrap gap-x-1 gap-y-2 items-center justify-center text-xl px-2 py-4 leading-none">
-        <Link href="/sitemap.xml" className="px-2">
-          <span className="underline text-bluePrimary hover:text-blueSecondary">
-            Site map
-          </span>
-        </Link>
-        <span className="font-bold">|</span>
-        <Link href="/contact" className="px-2">
-          <span className="underline text-bluePrimary hover:text-blueSecondary">
-            Contact
-          </span>
-        </Link>
-        <span className="font-bold">|</span>
-        <Link href="https://github.com/deadbraindev" className="px-2">
-          <span className="underline text-bluePrimary hover:text-blueSecondary">
-            Github
-          </span>
-        </Link>
-        {/* <Link href="/" className="px-2">
-          <span className="underline text-bluePrimary">Link 1</span>
-        </Link>
-        <span className="font-bold">|</span>
-        <Link href="/" className="px-2">
-          <span className="underline text-bluePrimary">Link 2</span>
-        </Link> */}
-      </nav>
-      {/* <span className="text-[16px]">Last updated: 26-02-2024, 16:15:52</span> */}
+    <footer className="flex flex-col m-auto bottom-0 text-center items-center justify-center py-4 w-full border-t-[1px] gap-4">
+      <nav className="flex flex-row gap-y-1 flex-wrap items-center justify-center w-full">
+        <StyledLink href="/me" className="px-2">
+          About me
+        </StyledLink>
+        <span className="font-bold text-sm">|</span>
+        <StyledLink href="/contact" className="px-2">
+          Contact
+        </StyledLink>
+        <span className="font-bold text-sm">|</span>
+        <StyledLink href="https://github.com/deadbraindev" className="px-2">
+          Github
+        </StyledLink>
 
-      {/* <span>PL </span> */}
-      <span className="text-[16px]">Made in Poland • 2024-2024</span>
+        {/* line break */}
+        <div className="h-0 basis-full" />
+
+        <StyledLink href="/sitemap" className="px-2">
+          Site map
+        </StyledLink>
+        <span className="font-bold text-sm">|</span>
+        <StyledLink href="/Settings" className="px-2">
+          Settings
+        </StyledLink>
+      </nav>
+      <span className="text-xs">Made in Poland • 2024-2024</span>
     </footer>
   );
 }

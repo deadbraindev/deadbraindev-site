@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Links() {
   return (
-    <div className="w-full m-auto sm:max-w-[450px] px-4">
+    <div className="w-full m-auto sm:max-w-[450px] px-4 min-h-[300px]">
       <span className="text-3xl font-bold">Pinned sites:</span>
       <ul className=" text-2xl">
         <li className="flex flex-row gap-1 items-center">
@@ -26,7 +26,6 @@ export default function Links() {
             className="underline text-bluePrimary font-bold hover:text-blueSecondary"
           >
             lofi.today
-            {/* → */}
           </Link>
         </li>
       </ul>

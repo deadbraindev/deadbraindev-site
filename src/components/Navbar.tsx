@@ -1,26 +1,22 @@
-import Link from 'next/link';
+// import Link from 'next/link';
+
+import StyledLink from './StyledLink';
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-row items-center justify-center min-w-[350px] max-w-[440px] m-auto text-2xl px-2 py-4 leading-none">
+    <nav className="flex flex-row items-center justify-center m-auto text-2xl py-2">
       <span>[</span>
-      <Link href="/" className="px-2">
-        <span className="underline text-bluePrimary hover:text-blueSecondary">
-          Home
-        </span>
-      </Link>
+      <StyledLink href="/" className="p-2" primary>
+        Home
+      </StyledLink>
       <span className="font-bold">|</span>
-      <Link href="/testpage" className="px-2">
-        <span className="underline text-bluePrimary hover:text-blueSecondary">
-          What&apos;s new?
-        </span>
-      </Link>
+      <StyledLink href="/blog" className="p-2" primary>
+        What&apos;s new?
+      </StyledLink>
       <span className="font-bold">|</span>
-      <Link href="/testpage" className="px-2">
-        <span className="underline text-bluePrimary hover:text-blueSecondary">
-          Contact
-        </span>
-      </Link>
+      <StyledLink href="/contact" className="p-2" primary>
+        Contact
+      </StyledLink>
       <span>]</span>
     </nav>
   );
