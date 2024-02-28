@@ -6,18 +6,6 @@ import { metaTags } from '@/siteConfig';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-// const EBGaramond = EB_Garamond({
-//   weight: ['400', '500', '600', '700', '800'],
-//   style: ['normal', 'italic'],
-//   subsets: ['latin'],
-//   display: 'swap',
-// });
-// const PlayfairFont = Playfair({
-//   weight: ['400', '500', '600', '700', '800'],
-//   style: ['normal', 'italic'],
-//   subsets: ['latin'],
-//   display: 'swap',
-// });
 const OldStandardTT = Old_Standard_TT({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
@@ -35,6 +23,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: './',
   },
+  icons: {
+    icon: '/icons/favicon.png',
+    shortcut: '/icons/apple-icon-180.png',
+    apple: '/icons/apple-icon-180.png',
+  },
+  publisher: 'deadbrain.dev',
 };
 
 export default function RootLayout({

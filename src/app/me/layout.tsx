@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'test page',
+  title: 'about me',
 };
 
-export default function TestpageLayout({
+export default function MePageLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

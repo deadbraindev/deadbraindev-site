@@ -1,11 +1,11 @@
 import Hero from '@/components/Hero';
-import Links from '@/components/Links';
+import PinnedSites from '@/components/PinnedSites';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Links />
+      <PinnedSites />
     </>
   );
 }
