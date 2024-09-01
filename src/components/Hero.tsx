@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import cake from '@/components/svg/cake.svg';
+import cake from '@/assets/cake.svg';
 
 export default function Hero() {
   return (

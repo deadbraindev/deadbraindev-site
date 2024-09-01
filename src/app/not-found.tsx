@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import cake404 from '@/components/svg/cake-404.svg';
 import StyledLink from '@/components/StyledLink';
+import cake404 from '@/assets/cake-notfound.svg';
 
 export default function NotFound() {
   return (

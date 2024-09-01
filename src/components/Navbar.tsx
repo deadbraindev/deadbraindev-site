@@ -1,5 +1,3 @@
-// import Link from 'next/link';
-
 import StyledLink from '@/components/StyledLink';
 
 export default function Navbar() {
