@@ -27,10 +27,11 @@ export default function PinnedSites() {
           </StyledLink>
         </li>
         <li className="flex flex-row gap-1 items-center">
-          <StyledLink 
+          <StyledLink
             href="https://print.deadbrain.dev"
             className="font-bold"
-            primary>
+            primary
+          >
             3d print calculator
           </StyledLink>
           <Image
