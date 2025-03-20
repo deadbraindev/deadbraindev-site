@@ -15,11 +15,6 @@ export default function PinnedSites() {
           >
             archiwum kulinarne
           </StyledLink>
-          <Image
-            src={BadgeNew}
-            alt="Badge for new site"
-            className="w-auto h-[20px] -rotate-[20deg] -translate-x-1 -translate-y-2 "
-          />
         </li>
         <li className="flex flex-row gap-1 items-center">
           <StyledLink href="https://lofi.today" className="font-bold" primary>
@@ -29,6 +24,11 @@ export default function PinnedSites() {
         <li className="flex flex-row gap-1 items-center">
           <StyledLink href="/badlink" className="font-bold" primary>
             404 page test
+          </StyledLink>
+        </li>
+        <li className="flex flex-row gap-1 items-center">
+          <StyledLink href="/badlink" className="font-bold" primary>
+            3d print calculator
           </StyledLink>
           <Image
             src={BadgeNew}
