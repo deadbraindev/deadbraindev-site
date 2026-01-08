@@ -56,7 +56,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'deadbrain',
-              url: 'https://www.deadbrain.dev',
+              url: 'https://deadbrain.dev',
               sameAs: ['https://github.com/deadbraindev'],
               jobTitle: 'idk',
               description:

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       // disallow: '/private/',
     },
-    sitemap: 'https://www.deadbrain.dev/sitemap.xml',
+    sitemap: 'https://deadbrain.dev/sitemap.xml',
   };
 }

@@ -1,16 +1,16 @@
 export const metaTags = {
   title: 'deadbrain',
   description: '💀🧠',
-  url: 'https://www.deadbrain.dev',
+  url: 'https://deadbrain.dev',
 
   publisher: 'deadbrain.dev',
 
-  metadataBase: new URL('https://www.deadbrain.dev'),
+  metadataBase: new URL('https://deadbrain.dev'),
 
   openGraph: {
     title: 'deadbrain',
     description: '💀🧠',
-    url: 'https://www.deadbrain.dev',
+    url: 'https://deadbrain.dev',
     siteName: 'deadbrain',
     locale: 'en_US',
     type: 'website',
