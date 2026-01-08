@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import cake404 from '@/components/svg/cake-404.svg';
+import cake404 from '@/components/svg/retro-cake-icon-pixel-art-no-candle.svg';
 import StyledLink from '@/components/StyledLink';
 
 export default function NotFound() {

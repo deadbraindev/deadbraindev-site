@@ -1,31 +1,27 @@
 export const metaTags = {
   title: 'deadbrain',
   description: '💀🧠',
+  url: 'https://www.deadbrain.dev',
 
   publisher: 'deadbrain.dev',
 
   metadataBase: new URL('https://www.deadbrain.dev'),
-  alternates: {
-    // canonical link with query params
-    // canonical: './',
-    // canonical link without query params
-    // canonical: '/',
+
+  openGraph: {
+    title: 'deadbrain',
+    description: '💀🧠',
+    url: 'https://www.deadbrain.dev',
+    siteName: 'deadbrain',
+    locale: 'en_US',
+    type: 'website',
   },
 
-  // openGraph: {
-  //   title: 'strona główna | archiwum kulinarne',
-  //   siteName: 'archiwum kulinarne',
-  //   url: '/',
-  //   images: [
-  //     {
-  //       url: 'https://archiwumkulinarne.deadbrain.dev/images/opengraph-img-1200-630.jpg',
-  //       width: 1200,
-  //       height: 630,
-  //     },
-  //   ],
-  //   locale: 'pl_PL',
-  //   type: 'website',
-  // },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'deadbrain',
+    description: '💀🧠',
+    creator: '@deadbraindev', // Adjust if you have a different handle
+  },
 };
 
 export default metaTags;

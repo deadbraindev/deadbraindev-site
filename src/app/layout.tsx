@@ -15,7 +15,7 @@ const OldStandardTT = Old_Standard_TT({
 
 export const metadata: Metadata = {
   title: {
-    default: `home page • ${metaTags.title} `,
+    default: `Home page • ${metaTags.title} `,
     template: `%s • ${metaTags.title}`,
   },
   description: metaTags.description,
@@ -29,6 +29,8 @@ export const metadata: Metadata = {
     apple: '/icons/apple-icon-180.png',
   },
   publisher: 'deadbrain.dev',
+  openGraph: metaTags.openGraph,
+  twitter: metaTags.twitter,
 };
 
 export default function RootLayout({
@@ -47,6 +49,21 @@ export default function RootLayout({
           <Footer />
         </main>
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'deadbrain',
+              url: 'https://www.deadbrain.dev',
+              sameAs: ['https://github.com/deadbraindev'],
+              jobTitle: 'idk',
+              description:
+                '💀🧠',
+            }),
+          }}
+        />
       </body>
     </html>
   );

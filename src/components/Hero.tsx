@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import cake from '@/components/svg/cake.svg';
+import cake from '@/components/svg/retro-cake-icon-pixel-art-candle.svg';
 
 export default function Hero() {
   return (
@@ -7,7 +7,7 @@ export default function Hero() {
       <Image
         priority
         src={cake}
-        alt="Pixelated image of a cake with a candle"
+        alt="Retro pixel art cake icon inspired by classic Windows UI"
         className="w-40 sm:w-48 h-auto"
       />
       <h1 className="sr-only">Welcome to my web site!</h1>

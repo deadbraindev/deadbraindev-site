@@ -4,14 +4,18 @@ import { twMerge } from 'tailwind-merge';
 export default function StyledLink({
   children,
   href,
-  className,
-  primary,
+  className = '',
+  primary = false,
+  external,
 }: {
   children: React.ReactNode;
   href: string;
   className?: string;
   primary?: boolean;
+  external?: boolean;
 }) {
+  const isExternal = external ?? (href.startsWith('http') || href.startsWith('//'));
+
   return (
     <Link
       href={href}
@@ -20,13 +24,11 @@ export default function StyledLink({
         className,
         primary ? 'text-2xl' : 'text-base',
       )}
+      {...(isExternal
+        ? { target: '_blank', rel: 'noopener noreferrer' }
+        : {})}
     >
       {children}
     </Link>
   );
 }
-
-StyledLink.defaultProps = {
-  className: null,
-  primary: false,
-};

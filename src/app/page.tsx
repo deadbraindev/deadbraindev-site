@@ -1,11 +1,11 @@
 import Hero from '@/components/Hero';
-import PinnedSites from '@/components/PinnedSites';
+import AboutSection from '@/components/AboutSection';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <PinnedSites />
+      <AboutSection />
     </>
   );
 }

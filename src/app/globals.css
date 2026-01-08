@@ -1,36 +1,149 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* ===== Color Palette (shadcn-style) ===== */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  /* Base colors */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+
+  /* Primary - classic blue links */
+  --primary: 240 100% 50%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary - lighter blue for hover */
+  --secondary: 240 100% 70%;
+  --secondary-foreground: 0 0% 100%;
+
+  /* Accent - pink */
+  --accent: 330 99% 70%;
+  --accent-foreground: 0 0% 0%;
+
+  /* Muted - for less prominent text */
+  --muted: 0 0% 45%;
+  --muted-foreground: 0 0% 40%;
+
+  /* Card/Popover backgrounds */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
+
+  /* Destructive - for errors */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* Border and input */
+  --border: 0 0% 80%;
+  --input: 0 0% 90%;
+  --ring: 240 100% 50%;
+
+  /* Visited link - classic purple */
+  --visited: 282 68% 32%;
+
+  /* Radius */
+  --radius: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0; */
-    --foreground-rgb: 0, 0, 0;
-    --background-rgb: 255, 255, 255;
-  }
+/* Tailwind v4 theme tokens */
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  /* Legacy color names for backwards compatibility */
+  --color-bluePrimary: hsl(var(--primary));
+  --color-blueSecondary: hsl(var(--secondary));
+  --color-pink: hsl(var(--accent));
 }
 
+/* ===== Base Styles ===== */
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb));
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
 }
+
 html, body {
   height: 100%;
   min-width: 400px;
 }
+
 ::selection {
-  background-color: #FE66CB;
-  color: black;
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
 }
 
+/* ===== Utilities ===== */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* ===== Animations ===== */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee {
+  animation: marquee 15s linear infinite;
+}
+
+/* ===== Focus Styles ===== */
+a:focus, button:focus {
+  outline: 2px dotted hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* ===== Retro Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #c0c0c0;
+  border: 1px solid #808080;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #dfdfdf 0%, #c0c0c0 50%, #a0a0a0 100%);
+  border: 1px outset #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c0c0c0 0%, #a0a0a0 50%, #808080 100%);
+}
+::-webkit-scrollbar-corner {
+  background: #c0c0c0;
 }

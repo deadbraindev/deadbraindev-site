@@ -6,8 +6,9 @@ export default function PinnedSites() {
   return (
     <div className="w-full m-auto px-4 sm:max-w-[450px]">
       <h2 className="text-3xl font-bold">Pinned sites:</h2>
-      <ul>
+      <ul className="mt-2">
         <li className="flex flex-row gap-1 items-center">
+          <span className="text-pink font-bold">»</span>
           <StyledLink
             href="https://archiwumkulinarne.deadbrain.dev"
             className="font-bold"
@@ -17,22 +18,20 @@ export default function PinnedSites() {
           </StyledLink>
         </li>
         <li className="flex flex-row gap-1 items-center">
-          <StyledLink href="https://lofi.today" className="font-bold" primary>
+          <span className="text-pink font-bold">»</span>
+          <StyledLink href="https://lofi.deadbrain.dev" className="font-bold" primary external>
             lofi.today
           </StyledLink>
         </li>
         <li className="flex flex-row gap-1 items-center">
-          <StyledLink href="/badlink" className="font-bold" primary>
-            404 page test
-          </StyledLink>
-        </li>
-        <li className="flex flex-row gap-1 items-center">
+          <span className="text-pink font-bold">»</span>
           <StyledLink
-            href="https://print.deadbrain.dev"
+            href="https://zoltestudio.pl"
             className="font-bold"
             primary
+            external
           >
-            3d print calculator
+            żółteSTUDIO
           </StyledLink>
           <Image
             src={BadgeNew}

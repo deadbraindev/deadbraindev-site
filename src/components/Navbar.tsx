@@ -18,6 +18,7 @@ export default function Navbar() {
         Contact
       </StyledLink>
       <span>]</span>
+      <span className="blink ml-1 text-bluePrimary font-bold">_</span>
     </nav>
   );
 }

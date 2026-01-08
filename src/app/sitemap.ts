@@ -1,24 +1,14 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: 'https://www.deadbrain.dev',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: 'https://www.deadbrain.dev/contact',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.9,
-    },
-    // {
-    //   url: 'https://acme.com/blog',
-    //   lastModified: new Date(),
-    //   changeFrequency: 'weekly',
-    //   priority: 0.5,
-    // },
-  ];
+  const baseUrl = 'https://www.deadbrain.dev';
+
+  const routes = ['', '/contact', '/blog', '/me'].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'monthly' as const,
+    priority: route === '' ? 1 : 0.8,
+  }));
+
+  return routes;
 }
